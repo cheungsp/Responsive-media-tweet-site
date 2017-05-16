@@ -1,0 +1,116 @@
+<%- include('./partials/header') %>
+<div class="navbar">
+  <nav>
+    <ul>
+      <%# <img src="/images/spenny.jpg" style="width:75px; height:100px;">%>
+      <img src="/images/lion.png" style="width:75px; height:75px;">
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a class="active" href="/">Home</a></li>
+    </ul>
+
+
+    <div class="profilepic">
+    <img src="/images/lion.jpg" style="width:75px; height:75px;">
+    </div>
+
+    <select class="hidden-nav" onChange="window.location.href=this.value">
+      <option value="" selected="selected">MENU</option>
+      <option value="/">Home</option>
+      <option value="/dashboard">Dashboard</option>
+    </select>
+    </nav>
+    </div>
+
+
+<%# <a href="/">Add Another item</a>%>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="info">
+            <div class="col-md-4">
+              <img src="/images/spenny.jpg" style="width:75px; height:100px;">
+            </div>
+            <div class="col-md-8 text-left">
+              <h2>Spencer Cheung</h2>
+                  @spenny
+            </div>
+            <div class="col-md-12" style="margin-top:5px;">
+              Messages: 12
+            </div>
+          </div>
+          <div class="trendingtext">
+          <h4 style="text-align:center">Trending AweTweets</h4>
+        </div>
+
+          <div class="col-md-12 trending">
+            <div class="trending-tweets">
+              #amIDoneYet
+              <br>
+              #killMeNow
+              <br>
+              #FML
+              <br>
+              #fuark
+              </div>
+            </div>
+          </div>
+
+        <div class="col-md-8">
+          <div class="col-xs-10 col-sm-10 col-md-11 enter-tweet">
+            <form action="/" method="post">
+              <div class="text-area-input">
+              <h4> @spenny </h4>
+              <textarea rows="4" cols="80" placeholder="Enter your tweet here. Capped length at 255 characters" maxlength="255" name="items"></textarea>
+              <br>
+            </div>
+              <div class="submitbut">
+                <input type="submit" style="float: right;">
+              </div>
+            </form>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-12 tweets">
+            <ul>
+              <%   items.sort(function(a, b){ %>
+              <%    return a.length - b.length; %>
+              <%      });%>
+
+              <% for (let i = 0; i < items.length; i++) { %>
+                <li>
+                <div class="post-container">
+                  <h5 class="post-title">@spenny</h5>
+                <div class="post-thumb">
+                  <img src="/images/spenny.jpg" style="width:50px; height:75px;">
+                </div>
+                <div class="post-content">
+                  <%= items[i] %>
+                <div class="posted">Posted: Monday May 15,2017 </div>
+                </div>
+                </div>
+                </li>
+                <% }%>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+  <%# <form action="/" method="post">
+    <input type="text" name="items" value="">
+    <input type="submit">
+  </form>%>
+
+
+<%- include('./partials/footer') %>

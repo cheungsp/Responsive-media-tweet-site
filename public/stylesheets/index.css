@@ -1,0 +1,149 @@
+html {
+  font-family: Helvetica, sans-serif;
+  font-weight: 200;
+  background-color: whitesmoke;
+}
+
+  #front-image{
+    width:100vw;
+    height:100vh;
+    margin-top: -30px;
+  }
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  .navbar li {
+    float: right;
+  }
+
+  .navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .navbar li a:hover {
+    background-color: #111;
+  }
+
+  nav select {
+    display: none;
+    float: right;
+  }
+  .profilepic {
+    display: none;
+  }
+
+  @media (max-width: 990px) {
+  nav ul     { display: none; }
+  nav select { display: inline-block;}
+  .profilepic {display: inline-block;}
+  .text-area-input{
+    margin-left: 75px;
+
+  }
+  /*.info {display: none};*/
+}
+
+@media(max-width: 990px){
+  .info {display: none}
+  .trending {display: none}
+  .trendingtext {display: none}
+  .post-thumb {display:none}
+  .enter-tweet{
+    text-align: left;
+    margin-left: 10px;
+    padding-left: 100px;
+  }
+}
+
+@media(min-width: 990px){
+  .enter-tweet{
+    text-align: left;
+    margin-left: 60px;
+  }
+}
+
+
+form {
+    width: 100%;
+    float: left;
+}
+textarea {
+    width:100%;
+    height:100px;
+    border:1px solid #dedede;
+    padding:10px;
+}
+
+.posted{
+  text-align: right;
+}
+
+.info{
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 16px;
+    border:1px solid black;
+    padding: 20px 0px 10px 0px;
+    margin-top: 50px;
+    background-color: whitesmoke;
+  }
+
+.trending{
+  overflow: hidden;
+  /*margin-top: 10px;*/
+  padding: 10px;
+  border:1px solid black;
+  font-size: 15px;
+  background-color: whitesmoke;
+}
+
+.post-container {
+    margin: 10px 10px 10px 10px;
+    border: 1px solid #333;
+    overflow: auto;
+}
+.post-thumb {
+    float: left
+}
+.post-thumb img {
+    display: block;
+    margin-top: -7px;
+}
+.post-content {
+    margin-left: 100px;
+    margin-right:10px;
+}
+.post-title {
+    font-weight: bold;
+    font-size: 110%;
+    padding: 9px;
+    background: #ccc;
+    margin-top: 0px;
+}
+
+select {
+  margin-right: 50px;
+  border: 1px solid #111;
+  background: transparent;
+  width: 150px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(/images/favicon.jpg) 96% / 15% no-repeat #eee;
+}
+.hidden-nav{
+  margin-right: 10px;
+}
